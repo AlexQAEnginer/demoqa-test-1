@@ -22,7 +22,7 @@ public class JunitTest {
 static void beforeAll() {
         Configuration.browserSize = "1920x1080";
         Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadTimeout = 40000;
+        Configuration.pageLoadTimeout = 50000;
         }
 
 @Test
@@ -33,6 +33,7 @@ static void beforeAll() {
     $("#userEmail").setValue("Lekseu7@yandex.ru");
     $("#currentAddress").setValue("Pytevay 18A");
     $("#permanentAddress").setValue("70");
+    $("#submit").click();
 
 }
 
