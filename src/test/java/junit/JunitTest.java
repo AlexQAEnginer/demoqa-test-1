@@ -35,6 +35,7 @@ static void beforeAll() {
     $("#permanentAddress").setValue("70");
     $("#submit").click();
 
+    $("#output #email").shouldHave((text("Lekseu7@yandex.ru")));
 }
 
 }
