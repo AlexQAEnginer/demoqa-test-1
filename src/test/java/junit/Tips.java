@@ -60,58 +60,58 @@ public class Tips {
         $(byTagAndText("div", "full text")); // найти текст через тег
         $(withTagAndText("div", "ull text")); // найти часть текста через тег
 
-        $("").parent();
-        $("").sibling(1);
-        $("").preceding(1);
+        $("").parent(); // это поиск по родителю
+        $("").sibling(1); // поиск по детяем вниз
+        $("").preceding(1); // поиск по детяем вверх
         $("").closest("div");
-        $("").ancestor("div"); // the same as closest
-        $("div:last-child");
+        $("").ancestor("div"); //  closest и ancestor одно и то же, помогают перейти выше по дереву
+        $("div:last-child"); // выбор последнего ребёнка
 
-        $("div").$("h1").find(byText("abc")).click();
+        $("div").$("h1").find(byText("abc")).click(); //выбирается поиск по div, потом по h1 внутри div, находим текст abc || fibd тоже самое, что $
         // very optional
-        $(byAttribute("abc", "x")).click();
-        $("[abc=x]").click();
+        $(byAttribute("abc", "x")).click(); // такми образом можно производить поиск по атрибутам
+        $("[abc=x]").click(); // аналогично верхнему, но сокращённо
 
-        $(byId("mytext")).click();
-        $("#mytext").click();
+        $(byId("mytext")).click(); // аналогично поиск по id
+        $("#mytext").click(); //аналогично верхнему но сокращённо
 
-        $(byClassName("red")).click();
-        $(".red").click();
+        $(byClassName("red")).click(); //аналогично поиск по классу
+        $(".red").click(); // аналогично верхнему, но сокращённо
     }
 
     void actions_examples() {
-        $("").click();
-        $("").doubleClick();
-        $("").contextClick();
+        $("").click(); //клик
+        $("").doubleClick(); //двойной клик
+        $("").contextClick(); //клик правой кнопкой
 
-        $("").hover();
+        $("").hover();//поднести мышку и не кликать
 
-        $("").setValue("text");
-        $("").append("text");
-        $("").clear();
-        $("").setValue(""); // clear
+        $("").setValue("text");//удаляет всё в поле, если там что-то есть и напишет заново
+        $("").append("text");//добавит часть теста в конец уже написанного
+        $("").clear();// очищает поле, не факт что сработает
+        $("").setValue(""); // очищает поле тоже, может сработать
 
-        $("div").sendKeys("c"); // hotkey c on element
-        actions().sendKeys("c").perform(); //hotkey c on whole application
-        actions().sendKeys(Keys.chord(Keys.CONTROL, "f")).perform(); // Ctrl + F
-        $("html").sendKeys(Keys.chord(Keys.CONTROL, "f"));
+        $("div").sendKeys("c"); // эмуляци нажатия на клавишу
+        actions().sendKeys("c").perform(); //тоже эмуляция нажатия клавиши, но без привязки к элементу
+        actions().sendKeys(Keys.chord(Keys.CONTROL, "f")).perform(); // Ctrl + F камбинация клавишь без привязки к элементу
+        $("html").sendKeys(Keys.chord(Keys.CONTROL, "f"));// как мне кажется, можно выбрать элемент и нажать комбинацию клавишь
 
-        $("").pressEnter();
-        $("").pressEscape();
-        $("").pressTab();
+        $("").pressEnter();//нажать enter
+        $("").pressEscape();//нажать назад
+        $("").pressTab();//нажать tab
 
 
         // complex actions with keybord and mouse, example
-        actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();
+        actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();//взять объект и потянуть в нужное место
 
         // old html actions don't work with many modern frameworks
-        $("").selectOption("dropdown_option");
-        $("").selectRadio("radio_options");
+        $("").selectOption("dropdown_option");// используется для стархы дроуп даунов - выпадашек
+        $("").selectRadio("radio_options");// используется для стархы чек-боксов
 
     }
 
     void assertions_examples() {
-        $("").shouldBe(visible);
+        $("").shouldBe(visible);// далее проверки положительные и атрицательные, на наличие объектов и отсутствие\ запрограмирован таймаут 4 секунды
         $("").shouldNotBe(visible);
         $("").shouldHave(text("abc"));
         $("").shouldNotHave(text("abc"));
@@ -120,7 +120,7 @@ public class Tips {
 
 
         //longer timeouts
-        $("").shouldBe(visible, Duration.ofSeconds(30));
+        $("").shouldBe(visible, Duration.ofSeconds(30)); //можно сделать таймаут больше 4 секунд, либо меньше
 
     }
 
@@ -129,30 +129,31 @@ public class Tips {
         $("").shouldBe(hidden);
 
         $("").shouldHave(text("abc"));
-        $("").shouldHave(exactText("abc"));
+        $("").shouldHave(exactText("abc"));//точный поиск текста
         $("").shouldHave(textCaseSensitive("abc"));
         $("").shouldHave(exactTextCaseSensitive("abc"));
         $("").should(matchText("[0-9]abc$"));
 
-        $("").shouldHave(cssClass("red"));
-        $("").shouldHave(cssValue("font-size", "12"));
+        $("").shouldHave(cssClass("red")); //поиск наличие класса
+        $("").shouldHave(cssValue("font-size", "12")); //поиск объекта с определенными свойствами
 
-        $("").shouldHave(value("25"));
+        $("").shouldHave(value("25")); //проверить, что написано в поле
         $("").shouldHave(exactValue("25"));
-        $("").shouldBe(empty);
+        $("").shouldBe(empty);//проверить, что поле пустое
 
-        $("").shouldHave(attribute("disabled"));
-        $("").shouldHave(attribute("name", "example"));
-        $("").shouldHave(attributeMatching("name", "[0-9]abc$"));
+        $("").shouldHave(attribute("disabled"));//проверка атрибута, что он существует
+        $("").shouldHave(attribute("name", "example"));//провекрка элемента по значениям
+        $("").shouldHave(attributeMatching("name", "[0-9]abc$")); //ввести точное название атрибута
 
-        $("").shouldBe(checked); // for checkboxes
+        $("").shouldBe(checked); // for checkboxes чек-бокс включен
+        $("").shouldNotBe(checked); // чек-бокс не включен
 
         // Warning! Only checks if it is in DOM, not if it is visible! You don't need it in most tests!
-        $("").should(exist);
+        $("").should(exist);//проверить существует ли скрытый объект
 
         // Warning! Checks only the "disabled" attribute! Will not work with many modern frameworks
-        $("").shouldBe(disabled);
-        $("").shouldBe(enabled);
+        $("").shouldBe(disabled); //определить кнопка кликабельная или нет
+        $("").shouldBe(enabled); //определить кнопка кликабельная или нет
     }
 
     void collections_examples() {
