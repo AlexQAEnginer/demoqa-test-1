@@ -89,7 +89,7 @@ public class Tips {
         $("").setValue("text");//удаляет всё в поле, если там что-то есть и напишет заново
         $("").append("text");//добавит часть теста в конец уже написанного
         $("").clear();// очищает поле, не факт что сработает
-        $("").setValue(""); // очищает поле тоже, может сработать
+        $("").setValue(""); // очищает поле тоже, может не сработать
 
         $("div").sendKeys("c"); // эмуляци нажатия на клавишу
         actions().sendKeys("c").perform(); //тоже эмуляция нажатия клавиши, но без привязки к элементу
@@ -105,8 +105,8 @@ public class Tips {
         actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();//взять объект и потянуть в нужное место
 
         // old html actions don't work with many modern frameworks
-        $("").selectOption("dropdown_option");// используется для стархы дроуп даунов - выпадашек
-        $("").selectRadio("radio_options");// используется для стархы чек-боксов
+        $("").selectOption("dropdown_option");// используется для старых дроуп даунов - выпадашек
+        $("").selectRadio("radio_options");// используется для старых чек-боксов
 
     }
 
@@ -158,56 +158,56 @@ public class Tips {
 
     void collections_examples() {
 
-        $$("div"); // does nothing!
+        $$("div"); // does nothing! поиск колекции, если нет в конце операции, то команда бесполезная
 
-        $$x("//div"); // by XPath
+        $$x("//div"); // by XPath то же самое но икспас
 
         // selections
-        $$("div").filterBy(text("123")).shouldHave(size(1));
-        $$("div").excludeWith(text("123")).shouldHave(size(1));
+        $$("div").filterBy(text("123")).shouldHave(size(1)); // filterBy ищет элементы которые удовлетворяют условия, которые написаны после него
+        $$("div").excludeWith(text("123")).shouldHave(size(1)); // excludeWith ищет элементы которые НЕ удовлетворяют условия, которые написаны после него
 
-        $$("div").first().click();
-        elements("div").first().click();
+        $$("div").first().click(); //выбрать первый элемент в коллекции
+        elements("div").first().click(); // тоже самое, но через elements
         // $("div").click();
-        $$("div").last().click();
-        $$("div").get(1).click(); // the second! (start with 0)
-        $("div", 1).click(); // same as previous
-        $$("div").findBy(text("123")).click(); //  finds first
+        $$("div").last().click();// выбрать последний элемент в коллекции
+        $$("div").get(1).click(); // the second! (start with 0) выбрать конкретный элемент в колекции
+        $("div", 1).click(); // same as previous сокращённо открыть первый элемент в коллекции
+        $$("div").findBy(text("123")).click(); //  finds first findsBy находит самый первый элемент
 
         // assertions
-        $$("").shouldHave(size(0));
-        $$("").shouldBe(CollectionCondition.empty); // the same
+        $$("").shouldHave(size(0)); //проверить размер коллекции
+        $$("").shouldBe(CollectionCondition.empty); // the same думаю, что найти одинаковые коллекции
 
-        $$("").shouldHave(texts("Alfa", "Beta", "Gamma"));
-        $$("").shouldHave(exactTexts("Alfa", "Beta", "Gamma"));
+        $$("").shouldHave(texts("Alfa", "Beta", "Gamma")); //найти текст, условие, если будет например 4 элемент "Threnama", то проверка НЕ сработает, а если например будет "Alfa3", "Beta2", то проверка сработает
+        $$("").shouldHave(exactTexts("Alfa", "Beta", "Gamma")); // если нужен конретный текст, то воспользоваться этой командой
 
-        $$("").shouldHave(textsInAnyOrder("Beta", "Gamma", "Alfa"));
-        $$("").shouldHave(exactTextsCaseSensitiveInAnyOrder("Beta", "Gamma", "Alfa"));
+        $$("").shouldHave(textsInAnyOrder("Beta", "Gamma", "Alfa"));// если порядок текста не важен, главное найти объекты в тексте, то воспользуемся этой командой
+        $$("").shouldHave(exactTextsCaseSensitiveInAnyOrder("Beta", "Gamma", "Alfa"));// проверяется с учётом регистра
 
-        $$("").shouldHave(itemWithText("Gamma")); // only one text
+        $$("").shouldHave(itemWithText("Gamma")); // only one text найти текст, не важно где он
 
-        $$("").shouldHave(sizeGreaterThan(0));
-        $$("").shouldHave(sizeGreaterThanOrEqual(1));
-        $$("").shouldHave(sizeLessThan(3));
-        $$("").shouldHave(sizeLessThanOrEqual(2));
+        $$("").shouldHave(sizeGreaterThan(0)); // в колекции элементов больше чем  0
+        $$("").shouldHave(sizeGreaterThanOrEqual(1)); //размер больше или равен 1
+        $$("").shouldHave(sizeLessThan(3));// в колекции элементов меньше чем 3
+        $$("").shouldHave(sizeLessThanOrEqual(2)); // меньше или равно 2
 
 
     }
 
     void file_operation_examples() throws FileNotFoundException {
 
-        File file1 = $("a.fileLink").download(); // only for <a href=".."> links
-        File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid
+        File file1 = $("a.fileLink").download(); // only for <a href=".."> links простая ссылка для скачивания, кликнул - началась загрузка, на старых сайтах
+        File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid более современная команда, работает в больших случаях
 
-        File file = new File("src/test/resources/readme.txt");
-        $("#file-upload").uploadFile(file);
-        $("#file-upload").uploadFromClasspath("readme.txt");
+        File file = new File("src/test/resources/readme.txt"); //выбрать файл по конретному пути
+        $("#file-upload").uploadFile(file); // загрузить файл который выбрал
+        $("#file-upload").uploadFromClasspath("readme.txt"); //автоматически выбрать файл из открывшейся папки
         // don't forget to submit!
-        $("uploadButton").click();
+        $("uploadButton").click(); // обязательно кликнуть кнопку
     }
 
     void javascript_examples() {
-        executeJavaScript("alert('selenide')");
+        executeJavaScript("alert('selenide')"); //команды которые запускают javascript
         executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
         long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
 
