@@ -1,4 +1,4 @@
-package selenide;
+package junit;
 
 import com.codeborne.selenide.*;
 import org.openqa.selenium.*;
