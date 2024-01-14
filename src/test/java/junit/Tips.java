@@ -102,7 +102,7 @@ public class Tips {
 
 
         // complex actions with keybord and mouse, example
-        actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();//взять объект и потянуть в нужное место
+        actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();//перенести объект в нужное место
 
         // old html actions don't work with many modern frameworks
         $("").selectOption("dropdown_option");// используется для старых дроуп даунов - выпадашек

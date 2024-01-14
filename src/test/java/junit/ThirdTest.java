@@ -4,27 +4,22 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.sleep;
 
-public class SecondTest {
+public class ThirdTest {
     @BeforeAll
     static void beforeAll() {
-
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://the-internet.herokuapp.com";
     }
-
     @Test
     void fistTest(){
-
-        open( "https://github.com/");
-        $$("div.header-menu-wrapper ul li.HeaderMenu-item").get(1).hover();
+        open( "/drag_and_drop");
+        $("#column-a").dragAndDropTo($("#column-b"));
         sleep(5000); //ставлю слипы чтобы было наглядно видно как отрабытывают команды
-        $$("div.header-menu-wrapper ul li.HeaderMenu-item").get(1).$$("div.HeaderMenu-dropdown ul li").first().click();
-        sleep(5000);
-        $("#hero-section-brand-heading").shouldHave(text("The AI-powered"));
-        sleep(5000);
+        $("#column-a").shouldHave(text("B"));
+        $("#column-b").shouldHave(text("A"));
     }
 }
+
