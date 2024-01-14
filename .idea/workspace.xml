@@ -5,23 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/src/test/java/junit/ThirdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/junit/JunitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/junit/JunitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/FirstTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/FirstTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/JunitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/JunitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/junit/SecondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/SecondTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/junit/ThirdTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/ThirdTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/junit/Tips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/Tips.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +80,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Gradle.ThirdTest (1)">
-    <configuration name="FirstTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="JunitTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,7 +93,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;junit.FirstTest&quot;" />
+            <option value="&quot;junit.JunitTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,10 +203,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ThirdTest (1)" />
+        <item itemvalue="Gradle.JunitTest" />
         <item itemvalue="Gradle.ThirdTest" />
         <item itemvalue="Gradle.SecondTest" />
         <item itemvalue="Gradle.SecondTest.fistTest" />
-        <item itemvalue="Gradle.FirstTest" />
       </list>
     </recent_temporary>
   </component>
@@ -383,7 +379,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705166196229</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add">
+      <option name="closed" value="true" />
+      <created>1705232505198</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1705232505198</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

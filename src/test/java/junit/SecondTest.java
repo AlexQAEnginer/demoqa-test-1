@@ -21,7 +21,7 @@ public class SecondTest {
 
         open( "https://github.com/");
         $$("div.header-menu-wrapper ul li.HeaderMenu-item").get(1).hover();
-        sleep(5000); //ставлю слипы чтобы было наглядно видно как отрабытывают команды
+        sleep(5000); //ставлю слипы чтобы было наглядно видно как отрабатывают команды
         $$("div.header-menu-wrapper ul li.HeaderMenu-item").get(1).$$("div.HeaderMenu-dropdown ul li").first().click();
         sleep(5000);
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered"));

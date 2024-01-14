@@ -17,7 +17,7 @@ public class ThirdTest {
     void fistTest(){
         open( "/drag_and_drop");
         $("#column-a").dragAndDropTo($("#column-b"));
-        sleep(5000); //ставлю слипы чтобы было наглядно видно как отрабытывают команды
+        sleep(5000); //ставлю слипы чтобы было наглядно видно как отрабатывают команды
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));
     }

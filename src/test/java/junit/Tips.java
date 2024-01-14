@@ -1,6 +1,10 @@
 package junit;
 
 import com.codeborne.selenide.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.*;
 
 import java.io.*;
@@ -14,6 +18,35 @@ import static com.codeborne.selenide.Selenide.*;
 
 // this is not a full list, just the most common
 public class Tips {
+
+
+        @BeforeAll // что-то выполняется до запуска всех тестов
+                static void setUp(){
+            Configuration.browserSize = "1920x1080";
+        }
+
+        @AfterAll // что-то выполняется после всех тестов
+        static void tearDown(){
+        Configuration.browserSize = "1920x1080";
+        }
+
+        @BeforeEach // что-то выполняется перед запуском теста
+        void beforeEachTest(){
+        Configuration.browserSize = "1920x1080";
+        }
+
+        @AfterEach// что-то выполняется после каждого теста
+        void afterEachTest(){
+        Configuration.browserSize = "1920x1080";
+        }
+
+    //Дополнительно, проверить, что находимся на нужной странице:
+    // какой-то код......
+    // В конце проводим обязательно проверку чего-то, иначе тест не успеет отработать, например поиск текста на странице $().shouldHave(text();
+    // после чего вводим следующее: String expectedUrl = "ссылка на сайт, которая должна быть равна нашей проверки";
+    //                              String currentUrl = url();
+    //                              assertEquals(expectedUrl, currentUrl);
+
 
     void browser_command_examples() {
         open("https://google.com");
@@ -103,6 +136,7 @@ public class Tips {
 
         // complex actions with keybord and mouse, example
         actions().moveToElement($("div")).clickAndHold().moveByOffset(300, 200).release().perform();//перенести объект в нужное место
+        $("#column-a").dragAndDropTo($("#column-b"));// перенос объекта на место другого объекта
 
         // old html actions don't work with many modern frameworks
         $("").selectOption("dropdown_option");// используется для старых дроуп даунов - выпадашек
