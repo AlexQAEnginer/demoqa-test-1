@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
+import static java.lang.ProcessBuilder.Redirect.to;
 
 public class ThirdTest {
     @BeforeAll
