@@ -24,6 +24,9 @@ public class FourTest {
         $("#lastName").setValue("Kozharin");
         $("#userEmail").setValue("Lekseu2007@yandex.ru");
         $("#genterWrapper").$(byText("Male")).click();
+        $("#userNumber").setValue("9080551234");
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__year-select").selectOption("1992");
         sleep(10000);
 
     }
