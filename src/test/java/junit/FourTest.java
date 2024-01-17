@@ -27,6 +27,8 @@ public class FourTest {
         $("#userNumber").setValue("9080551234");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption("1992");
+        $(".react-datepicker__month-select").selectOption("July");
+        $(".react-datepicker__day--006").click();
         sleep(10000);
 
     }
