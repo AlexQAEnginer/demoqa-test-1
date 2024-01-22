@@ -241,8 +241,8 @@ public class Tips {
         File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid более современная команда, работает в больших случаях
 
         File file = new File("src/test/resources/readme.txt"); //выбрать файл по конретному пути
-        $("#file-upload").uploadFile(file); // загрузить файл который выбрал
-        $("#file-upload").uploadFromClasspath("readme.txt"); //автоматически выбрать файл из открывшейся папки
+        $("#file-upload").uploadFile(file); // загрузить файл который выбрал $("#uploadPicture").uploadFile(new File("src/test/resources/img/test.png"));
+        $("#file-upload").uploadFromClasspath("img/test.png"); //автоматически выбрать файл из открывшейся папки
         // don't forget to submit!
         $("uploadButton").click(); // обязательно кликнуть кнопку
     }
@@ -251,6 +251,6 @@ public class Tips {
         executeJavaScript("alert('selenide')"); //команды которые запускают javascript
         executeJavaScript("alert(arguments[0]+arguments[1])", "abc", 12);
         long fortytwo = executeJavaScript("return arguments[0]*arguments[1];", 6, 7);
-
+        Selenide.executeJavaScript("$('#fixedban').remove()"); // - например такой командой можно удалить объект
     }
 }
