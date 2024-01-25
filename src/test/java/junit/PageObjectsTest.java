@@ -1,17 +1,21 @@
 package junit;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import pages.RegistrationPage;
 
 import java.io.File;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.appear;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class FourTest {
+public class PageObjectsTest {
+    RegistrationPage registrationPage = new RegistrationPage();
+
+
     @BeforeAll
     static void beforeAll() {
 
@@ -21,16 +25,16 @@ public class FourTest {
     }
 
     @Test
-    void fistTest(){
+    void fistTest() {
 
-        open("/automation-practice-form");
-        $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-        executeJavaScript("$('.Google-Ad').remove()");
-        $("#firstName").setValue("Alexey");
-        $("#lastName").setValue("Kozharin");
-        $("#userEmail").setValue("Lekseu2007@yandex.ru");
-        $("#genterWrapper").$(byText("Male")).click();
-        $("#userNumber").setValue("9080551234");
+        registrationPage.openPage()
+                .setFirstName("Alex")
+                .setLastName("Kozharin")
+                .setEmail("Lekseu2007@yandex.ru")
+                .setGender("Male")
+                .setPhone("9080551234");
+
+
         $("#dateOfBirthInput").click();
         $(".react-datepicker__year-select").selectOption("1992");
         $(".react-datepicker__month-select").selectOption("July");
