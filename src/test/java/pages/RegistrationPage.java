@@ -9,9 +9,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationPage {
-    CalenderComponet calenderComponet = new CalenderComponet();
-    RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
-
+    private CalenderComponet calenderComponet = new CalenderComponet();
+    private RegistrationResultsModal registrationResultsModal = new RegistrationResultsModal();
     private SelenideElement
             dateOfBirthInput = $("#dateOfBirthInput"),
             firstNameInput = $("#firstName"),
