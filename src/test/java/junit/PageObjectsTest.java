@@ -1,9 +1,6 @@
 package junit;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPage;
 
 import java.io.File;
 
@@ -12,17 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class PageObjectsTest {
-    RegistrationPage registrationPage = new RegistrationPage();
-
-
-    @BeforeAll
-    static void beforeAll() {
-
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-        Configuration.pageLoadTimeout = 50000;
-    }
+public class PageObjectsTest extends TestBase {
 
     @Test
     void fistTest() {
@@ -32,13 +19,10 @@ public class PageObjectsTest {
                 .setLastName("Kozharin")
                 .setEmail("Lekseu2007@yandex.ru")
                 .setGender("Male")
-                .setPhone("9080551234");
+                .setPhone("9080551234")
+                .setBathDate("06", "july", "1992");
 
 
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__year-select").selectOption("1992");
-        $(".react-datepicker__month-select").selectOption("July");
-        $(".react-datepicker__day--006").click();
         $("#subjectsInput").setValue("Hindi").pressEnter();
         $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/img/test.png"));
@@ -48,9 +32,12 @@ public class PageObjectsTest {
         $("#city").click();
         $("#stateCity-wrapper").$(byText("Karnal")).click();
         $("#submit").click();
-        $(".modal-dialog").should(appear);
-        $(".modal-header").shouldHave(text("Thanks for submitting the form"));
-        $(".table").shouldHave(text("Male"), text("Sports"));
+
+        registrationPage.verifyResultsModalAppears()
+                .verifyResult("Student Name", "Alex Kozharin")
+                .verifyResult("Student Email", "Lekseu2007@yandex.ru");
+
+
         sleep(10000);
     }
 }
