@@ -1,12 +1,10 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalenderComponet;
 import pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -17,7 +15,7 @@ public class RegistrationPage {
             dateOfBirthInput = $("#dateOfBirthInput"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
-            uploadImage =  $("#uploadPicture");
+            uploadImage = $("#uploadPicture");
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -60,24 +58,31 @@ public class RegistrationPage {
     public RegistrationPage setBathDate(String day, String month, String year) {
         dateOfBirthInput.click();
         calenderComponet.setDate(day, month, year);
+
         return this;
     }
-    public RegistrationPage verifyResultsModalAppears (){
+
+    public RegistrationPage verifyResultsModalAppears() {
         registrationResultsModal.verifyModalAppears();
-        return this;
-    }
-    public RegistrationPage verifyResult(String key, String value){
-        registrationResultsModal.verifyResult(key,value);
+
         return this;
     }
 
-    public RegistrationPage setSubjects(String value){
+    public RegistrationPage verifyResult(String key, String value) {
+        registrationResultsModal.verifyResult(key, value);
+
+        return this;
+    }
+
+    public RegistrationPage setSubjects(String value) {
         $("#subjectsInput").setValue(value).pressEnter();
+
         return this;
     }
 
-    public RegistrationPage setHobbies(String value){
+    public RegistrationPage setHobbies(String value) {
         $("#hobbiesWrapper").$(byText(value)).click();
+
         return this;
     }
 
@@ -85,7 +90,33 @@ public class RegistrationPage {
         uploadImage.uploadFromClasspath("img/" + value);
 
         return this;
-
     }
 
+    public RegistrationPage setAddress(String value) {
+        $("#currentAddress").setValue(value);
+
+        return this;
+    }
+
+    public RegistrationPage setState(String value) {
+        $("#state").click();
+        $("#stateCity-wrapper")
+                .$(byText(value)).click();
+
+        return this;
+    }
+
+    public RegistrationPage setCity(String value) {
+        $("#city").click();
+        $("#stateCity-wrapper")
+                .$(byText(value)).click();
+
+        return this;
+    }
+
+    public RegistrationPage submitClick() {
+        $("#submit").click();
+
+        return this;
+    }
 }

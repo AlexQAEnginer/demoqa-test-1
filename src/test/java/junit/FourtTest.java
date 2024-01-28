@@ -1,7 +1,6 @@
 package junit;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -47,7 +46,6 @@ public class FourtTest {
         $(".modal-dialog").should(appear);
         $(".modal-header").shouldHave(text("Thanks for submitting the form"));
         $(".table").shouldHave(text("Male"), text("Sports"));
-        sleep(10000);
     }
 }
 
