@@ -1,10 +1,12 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.CalenderComponet;
 import pages.components.RegistrationResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.value;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -14,7 +16,8 @@ public class RegistrationPage {
     private SelenideElement
             dateOfBirthInput = $("#dateOfBirthInput"),
             firstNameInput = $("#firstName"),
-            lastNameInput = $("#lastName");
+            lastNameInput = $("#lastName"),
+            uploadImage =  $("#uploadPicture");
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -67,4 +70,22 @@ public class RegistrationPage {
         registrationResultsModal.verifyResult(key,value);
         return this;
     }
+
+    public RegistrationPage setSubjects(String value){
+        $("#subjectsInput").setValue(value).pressEnter();
+        return this;
+    }
+
+    public RegistrationPage setHobbies(String value){
+        $("#hobbiesWrapper").$(byText(value)).click();
+        return this;
+    }
+
+    public RegistrationPage setUploadPicture(String value) {
+        uploadImage.uploadFromClasspath("img/" + value);
+
+        return this;
+
+    }
+
 }

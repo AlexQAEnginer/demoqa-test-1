@@ -20,12 +20,13 @@ public class PageObjectsTest extends TestBase {
                 .setEmail("Lekseu2007@yandex.ru")
                 .setGender("Male")
                 .setPhone("9080551234")
-                .setBathDate("06", "july", "1992");
+                .setBathDate("06", "july", "1992")
+                .setSubjects("Hindi")
+                .setHobbies("Sports")
+                .setUploadPicture("test.png")
 
 
-        $("#subjectsInput").setValue("Hindi").pressEnter();
-        $("#hobbiesWrapper").$(byText("Sports")).click();
-        $("#uploadPicture").uploadFile(new File("src/test/resources/img/test.png"));
+
         $("#currentAddress").setValue("information");
         $("#state").click();
         $("#stateCity-wrapper").$(byText("Haryana")).click();
@@ -35,9 +36,14 @@ public class PageObjectsTest extends TestBase {
 
         registrationPage.verifyResultsModalAppears()
                 .verifyResult("Student Name", "Alex Kozharin")
-                .verifyResult("Student Email", "Lekseu2007@yandex.ru");
-
-
+                .verifyResult("Student Email", "Lekseu2007@yandex.ru")
+                .verifyResult("Gender", "Male")
+                .verifyResult("Mobile", "9080551234")
+                .verifyResult("Subjects", "Hindi")
+                .verifyResult("Hobbies", "Sports")
+                .verifyResult("Picture", "test.png")
+                .verifyResult("Address", "information")
+                .verifyResult("State and City", "Haryana Karnal");
         sleep(10000);
     }
 }
