@@ -1,10 +1,7 @@
 package junit;
 
 import com.codeborne.selenide.*;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 
 import java.io.*;
@@ -19,26 +16,41 @@ import static com.codeborne.selenide.Selenide.*;
 // this is not a full list, just the most common
 public class Tips {
 
+    //аннотации - метки
+    @DisplayName("Имя теста, что он тестирует, ВАЖНО - аннотация интегррована с Allure")
 
-        @BeforeAll // что-то выполняется до запуска всех тестов
-                static void setUp(){
-            Configuration.browserSize = "1920x1080";
-        }
+    @Disabled("Исключает тест из проверки. Обычно прописывают почему, номер тиккета - бага, или задачи в рамках которой тест требуется поправить")
 
-        @AfterAll // что-то выполняется после всех тестов
-        static void tearDown(){
+    @Tag("BLOCKER")
+
+    @Tags({@Tag("BLOCKER"),@Tag("UI_TEST")}) // указывается функциональная серьёзность теста + через Gradle можно запустить определенный тест по тегу
+
+
+
+    @BeforeAll // что-то выполняется до запуска всех тестов
+    static void setUp() {
         Configuration.browserSize = "1920x1080";
-        }
+    }
 
-        @BeforeEach // что-то выполняется перед запуском теста
-        void beforeEachTest(){
+    @AfterAll // что-то выполняется после всех тестов
+    static void tearDown() {
         Configuration.browserSize = "1920x1080";
-        }
+    }
 
-        @AfterEach// что-то выполняется после каждого теста
-        void afterEachTest(){
+    @BeforeEach
+        // что-то выполняется перед запуском теста
+    void beforeEachTest() {
         Configuration.browserSize = "1920x1080";
-        }
+    }
+
+
+    @AfterEach
+        // что-то выполняется после каждого теста
+    void afterEachTest() {
+        Configuration.browserSize = "1920x1080";
+    }
+
+    // множество разных сравнений Assertions.assertTrue();
 
     //Дополнительно, проверить, что находимся на нужной странице:
     // какой-то код......
@@ -117,7 +129,7 @@ public class Tips {
         //$(byText("Male")).click(); - тоже часто срабатывает, выбрать сразу контейнер кнопки с тексом и кликнуть, не очень хороший вариант, bytext ищет первый текст с таким названием, возможно, такой текст может встретиться ранее
         $(".react-datepicker__year-select").selectOption("1992"); // отрабатывает в рамках выпадашек, например выбора даты рождения, нужно присутсвие двух селекторов родительского select и дочернего Option
         $(".selector_1:not(.selector_2)").click(); //ищет объект с селектором 1, но при этом в этом объекте не должно быть селектора 2
-        }
+    }
 
     void actions_examples() {
         $("").click(); //клик
