@@ -2,9 +2,12 @@ package junit;
 
 import com.codeborne.selenide.*;
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.*;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 
 import static com.codeborne.selenide.CollectionCondition.*;
@@ -12,6 +15,7 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 // this is not a full list, just the most common
 public class Tips {
@@ -23,8 +27,17 @@ public class Tips {
 
     @Tag("BLOCKER")
 
-    @Tags({@Tag("BLOCKER"),@Tag("UI_TEST")}) // указывается функциональная серьёзность теста + через Gradle можно запустить определенный тест по тегу
+    @Tags({@Tag("BLOCKER"), @Tag("UI_TEST")})
+    // указывается функциональная серьёзность теста + через Gradle можно запустить определенный тест по тегу
 
+    @CsvSource({
+            "Велосипеды, www.velostrana.ru",
+            "Мячики, www.ozon.ru"
+    })
+    //  @ParameterizedTest(name = "При вводе {0} отображается сайт {1}") - тест если участвует разная тест дата в рамках одного тест
+
+    @CsvFileSource(resources = "/testDataBikesAppearWhenSearchingInChromeBrowser.csv")
+    // - можно вытянуть данные для теста описанного сверху из файла в папке resources
 
 
     @BeforeAll // что-то выполняется до запуска всех тестов
@@ -247,7 +260,7 @@ public class Tips {
 
     }
 
-    void file_operation_examples() throws FileNotFoundException {
+    void file_operation_examples() throws Exception {
 
         File file1 = $("a.fileLink").download(); // only for <a href=".."> links простая ссылка для скачивания, кликнул - началась загрузка, на старых сайтах
         File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid более современная команда, работает в больших случаях
@@ -257,7 +270,24 @@ public class Tips {
         $("#file-upload").uploadFromClasspath("img/test.png"); //автоматически выбрать файл из открывшейся папки
         // don't forget to submit!
         $("uploadButton").click(); // обязательно кликнуть кнопку
-    }
+
+
+        open("https://torrent-games.link/8322-resident-evil-4-remake.html");
+        File downloadedFile = $("#og-button1").download(); // пример, как скачать файл, ВНИМАНИЕ! - относится к атрибутам href=....  в этой же строчке требуется найти селектор!
+        InputStream is = new FileInputStream(downloadedFile); // эта строчка и последующие открывает скаченный файл, трансформирует в стандарт кодировки UTF_8, после чего проверяет присутствие текста Test в файле
+        byte[] bytes = is.readAllBytes();
+        String textContent = new String(bytes, StandardCharsets.UTF_8);
+        assertThat(textContent).contains("Test");
+        is.close(); // если проверка успешна, закрывает файл, тест продолжается, если проверка не пройдена, тест упадёт (не принято использовать такой метод, но если потребуется)
+
+        //  open("https://torrent-games.link/8322-resident-evil-4-remake.html");
+        //  File downloadedFile = $("#og-button1").download(); // пример, как скачать файл
+        //  try (InputStream is = new FileInputStream(downloadedFile)){ // эта строчка и последующие открывает скаченный файл, трансформирует в стандарт кодировки UTF_8, после чего проверяет присутствие текста Test в файле
+        //     byte[] bytes = is.readAllBytes();
+        //    String textContent = new String(bytes, StandardCharsets.UTF_8);
+        //    assertThat(textContent).contains("Test"); //это считается правильная конструкция кода, пропускает шаг, если не проверка по текусту проходит не успешно
+  //  }
+}
 
     void javascript_examples() {
         executeJavaScript("alert('selenide')"); //команды которые запускают javascript
