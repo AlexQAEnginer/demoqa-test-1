@@ -84,7 +84,7 @@ public class Tips {
 
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
-        executeJavaScript("sessionStorage.clear();"); // в целом все три команды применяются одновременно, чтобы почитить куки/кеши
+        executeJavaScript("sessionStorage.clear();"); // в целом все три команды применяются одновременно, чтобы почистить куки/кеши
 
         Selenide.confirm(); // OK in alert dialogs
         Selenide.dismiss(); // Cancel in alert dialogs // команды для сплывающих окон, первая кликает ок, вторая кликает закрыть
@@ -127,7 +127,7 @@ public class Tips {
 
         $("div").$("h1").find(byText("abc")).click(); //выбирается поиск по div, потом по h1 внутри div, находим текст abc || fibd тоже самое, что $
         // very optional
-        $(byAttribute("abc", "x")).click(); // такми образом можно производить поиск по атрибутам
+        $(byAttribute("abc", "x")).click(); // таким образом можно производить поиск по атрибутам
         $("[abc=x]").click(); // аналогично верхнему, но сокращённо
 
         $(byId("mytext")).click(); // аналогично поиск по id
@@ -151,6 +151,7 @@ public class Tips {
 
         $("").hover();//поднести мышку и не кликать
 
+        $("").type("text"); // медленно печатает текст, как будто человек
         $("").setValue("text");//удаляет всё в поле, если там что-то есть и напишет заново
         $("").append("text");//добавит часть теста в конец уже написанного
         $("").clear();// очищает поле, не факт что сработает
@@ -261,6 +262,11 @@ public class Tips {
     }
 
     void file_operation_examples() throws Exception {
+
+        //static {
+       //     Configuration.fileDownload = FileDownloadMode.PROXY;
+       // }  - используется, если нет атрибута href для скачивания файлом
+
 
         File file1 = $("a.fileLink").download(); // only for <a href=".."> links простая ссылка для скачивания, кликнул - началась загрузка, на старых сайтах
         File file2 = $("div").download(DownloadOptions.using(FileDownloadMode.FOLDER)); // more common options, but may have problems with Grid/Selenoid более современная команда, работает в больших случаях

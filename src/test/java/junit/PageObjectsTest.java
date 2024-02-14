@@ -3,6 +3,7 @@ package junit;
 import org.junit.jupiter.api.Test;
 
 public class PageObjectsTest extends TestBase {
+    String setFirstName = "Alex";
 
     @Test
     void fistTest() {

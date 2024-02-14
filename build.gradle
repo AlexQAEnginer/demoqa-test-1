@@ -10,7 +10,9 @@ dependencies {
             "com.codeborne:selenide:6.19.1",
             "org.junit.jupiter:junit-jupiter:5.9.1",
             "org.assertj:assertj-core:3.25.2",
-            "org.slf4j:slf4j-simple:2.0.6"
+            "org.slf4j:slf4j-simple:2.0.6",
+            "com.codeborne:pdf-test:1.8.1",
+            "com.codeborne:xls-test:1.7.1"
     )
 
 }

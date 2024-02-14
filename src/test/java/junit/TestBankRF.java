@@ -36,14 +36,23 @@ public class TestBankRF {
         $$("div.dp__calendar div.dp__cell_inner").get(7).shouldHave(text("6")).click();
         $(".js--dp-apply").click();
         $("[name=\"form[CITY]\"]").click();
-        $("[name=\"form[CITY]\"]").setValue("Челябинск");
-        $("[name=\"form[CITY]\"]").click();
+        //$("[name=\"form[CITY]\"]").setValue("Челябинск");
+        $$(".select__list li[data-value=\"Челябинск\"]")
+                .findBy(text("Челябинск"))
+                .shouldBe(visible)
+                .click();
+       // $("[name=\"form[CITY]\"]").click();
         $("input[name=\"form[EMAIL]\"]").setValue("Lekseu2007@yandex.ru");
         $("[name=\"form[PHONE]\"]").click();
         $("input.input__field[name=\"form[PHONE]\"]").setValue("9080551234");
         $("[name=\"form[PROFF_INT]\"]").click();
-        $("[name=\"form[PROFF_INT]\"]").setValue("Информационные технологии");
-        $("[name=\"form[PROFF_INT]\"]").click();
+        $$(".select__list li[data-value=\"Информационные технологии\"]")
+                .findBy(text("Информационные технологии"))
+                .shouldBe(visible)
+                .click();
+
+        //$("[name=\"form[PROFF_INT]\"]").setValue("Информационные технологии");
+        //$("[name=\"form[PROFF_INT]\"]").click();
         $("[name=\"form[ABOUT]\"]").setValue("Хочу работать в лучшем банке мира:)))) ссылка на видео автотеста:.....)))");
         $("input[type=\"file\"]").uploadFromClasspath("example/Резюме_Тестировщик_ПО_QA_Enginner_Алексей_Владимирович_Кожарин_от.pdf");
         $(".form__conf-policy div.checkbox__field").click();
