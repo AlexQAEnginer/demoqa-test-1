@@ -3,6 +3,7 @@ package junit;
 import com.codeborne.pdftest.PDF;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.xlstest.XLS;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -10,11 +11,12 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 
-import static com.codeborne.pdftest.assertj.Assertions.assertThat;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideFilesTest {
 
@@ -36,11 +38,20 @@ public class SelenideFilesTest {
         $(".drop-uploaded__name").shouldHave(text("Резюме_Тестировщик_ПО_QA_Enginner_Алексей_Владимирович_Кожарин_от"));
         sleep(5000);
     }
+
     @Test
     void SelenideDownloadPDF() throws Exception {
         open("https://junit.org/junit5/docs/current/user-guide/");
         File downloadedPdf = $("[href='junit-user-guide-5.10.2.pdf']").download();
         PDF content = new PDF(downloadedPdf);
         assertThat(content.text).contains("Sam");
+    }
+
+    @Test
+    void SelenideDownloadXls() throws Exception {
+        open("https://itsm365.com/documents_rus/web/Content/import/import_org_file.htm");
+        File downloadedXml = $("[href='../Resources/doc/import_ou_xlsx.xlsx']").download();
+        XLS content = new XLS(downloadedXml);
+        assertThat(content.excel.getSheetAt(0).getRow(1).getCell(2).getStringCellValue()).contains("Коммерческий департамент");
     }
 }
