@@ -36,7 +36,7 @@ public class Tips {
     })
     //  @ParameterizedTest(name = "При вводе {0} отображается сайт {1}") - тест если участвует разная тест дата в рамках одного тест
 
-    @CsvFileSource(resources = "/testDataBikesAppearWhenSearchingInChromeBrowser.csv")
+    @CsvFileSource(resources = "/example/testDataBikesAppearWhenSearchingInChromeBrowser.csv")
     // - можно вытянуть данные для теста описанного сверху из файла в папке resources
 
 

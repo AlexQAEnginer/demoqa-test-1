@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -26,7 +25,7 @@ public class ParameterizedSet {
     //        "Мячики, www.ozon.ru"
     //})
 
-    @CsvFileSource(resources = "/testDataBikesAppearWhenSearchingInChromeBrowser.csv")
+    @CsvFileSource(resources = "/example/testDataBikesAppearWhenSearchingInChromeBrowser.csv")
     @ParameterizedTest(name = "При вводе {0} отображается сайт {1}")
     @Tags({@Tag("BLOCKER"), @Tag("UI_TEST")})
     void BikesAppearWhenSearchingInChromeBrowser(
