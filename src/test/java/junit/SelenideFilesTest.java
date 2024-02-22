@@ -1,21 +1,17 @@
 package junit;
 
 import com.codeborne.pdftest.PDF;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.xlstest.XLS;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.opencsv.CSVReader;
+import junit.model.Glossary;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.io.Zip;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.zip.ZipEntry;
-import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
 
@@ -23,6 +19,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
+import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideFilesTest {
@@ -109,6 +106,47 @@ public class SelenideFilesTest {
 
                 }
             }
+        }
+    }
+
+    @Test
+    void SelenideDownloadJson() throws Exception {
+        Gson gson = new Gson();
+        try (
+                InputStream resource = cl.getResourceAsStream("example/test.json");
+                InputStreamReader reader = new InputStreamReader(resource)
+        ) {
+            JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
+            assertThat(jsonObject.get("title").getAsString()).isEqualTo("example glossary");
+            assertThat(jsonObject.get("GlossDiv").getAsJsonObject().get("title").getAsString()).isEqualTo("S");
+            assertThat(jsonObject.get("GlossDiv").getAsJsonObject().get("flag").getAsBoolean()).isTrue();
+        }
+    }
+
+    @Test
+    void SelenideDownloadImprovedJson() throws Exception {
+        Gson gson = new Gson();
+        try (
+                InputStream resource = cl.getResourceAsStream("example/test.json");
+                InputStreamReader reader = new InputStreamReader(resource)
+        ) {
+            Glossary jsonObject = gson.fromJson(reader, Glossary.class);
+            assertThat(jsonObject.title).isEqualTo("example glossary");
+            assertThat(jsonObject.glossDiv.title).isEqualTo("S");
+            assertThat(jsonObject.glossDiv.flag).isTrue();
+        }
+    }
+    @Test
+    void SelenideDownloadChromeJson() throws Exception {
+        Gson gson = new Gson();
+        open("https://filesamples.com/formats/json");
+        File downloadedJson = $("[href='/samples/code/json/sample1.json']").download();
+        try (
+                InputStream resource = new FileInputStream(downloadedJson);
+                InputStreamReader reader = new InputStreamReader(resource)
+        ) {
+            JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
+            assertThat(jsonObject.get("fruit").getAsString()).isEqualTo("Apple");
         }
     }
 }
