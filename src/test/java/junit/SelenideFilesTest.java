@@ -19,7 +19,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static java.lang.Thread.sleep;
-import static org.assertj.core.api.Assertions.as;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class SelenideFilesTest {
@@ -84,7 +83,7 @@ public class SelenideFilesTest {
 
     @Test
     void SelenideDownloadZip() throws Exception {
-        try (InputStream resource = cl.getResourceAsStream("example/Test.rar");
+        try (InputStream resource = cl.getResourceAsStream("example/TestFile.txt.zip");
              ZipInputStream zis = new ZipInputStream(resource)
         ) {
             ZipEntry entry;
@@ -93,17 +92,15 @@ public class SelenideFilesTest {
                 if (entry.getName().endsWith(".csv")) {
                     CSVReader reader = new CSVReader(new InputStreamReader(zis));
                     List<String[]> content = reader.readAll();
-                    assertThat(content.get(0)[0]).contains("John");
+                    assertThat(content.get(0)[0]).contains("Вышестоящий отдел");
 
                 } else if (entry.getName().endsWith(".pdf")) {
                     PDF content = new PDF(zis);
-                    assertThat(content.text).contains("Windows & Linux keymap");
+                    assertThat(content.text).contains("Sam");
 
                 } else if (entry.getName().contains(".xlsx")) {
                     XLS content = new XLS(zis);
-                    assertThat(content.excel.getSheetAt(0).getRow(0).getCell(0)
-                            .getStringCellValue()).contains("1. Внутренняя экономика (S1)");
-
+                    assertThat(content.excel.getSheetAt(0).getRow(1).getCell(2).getStringCellValue()).contains("Коммерческий департамент");
                 }
             }
         }
@@ -136,6 +133,7 @@ public class SelenideFilesTest {
             assertThat(jsonObject.glossDiv.flag).isTrue();
         }
     }
+
     @Test
     void SelenideDownloadChromeJson() throws Exception {
         Gson gson = new Gson();
@@ -147,6 +145,25 @@ public class SelenideFilesTest {
         ) {
             JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
             assertThat(jsonObject.get("fruit").getAsString()).isEqualTo("Apple");
+        }
+    }
+    @Test
+    void SelenideDownloadZipo() throws Exception {
+        open("https://ru.files.me/u/adbd6a7ukw");
+        $(".head_download__button_desktop").click();
+        File downloadedZip = $("[href='https://fv5-2.failiem.lv/down.php?i=2qnfp2dn5v']").download();
+        try (InputStream resource = new FileInputStream(downloadedZip);
+             ZipInputStream zis = new ZipInputStream(resource)
+        ) {
+            ZipEntry entry;
+            while ((entry = zis.getNextEntry()) != null) {
+
+                if (entry.getName().endsWith("import_ou_csv (2).csv")) {
+                    CSVReader reader = new CSVReader(new InputStreamReader(zis));
+                    List<String[]> content = reader.readAll();
+                    assertThat(content.get(0)[0]).contains("w");
+                }
+            }
         }
     }
 }
