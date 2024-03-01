@@ -2,6 +2,8 @@ package junit;
 
 import org.junit.jupiter.api.Test;
 
+import static pages.components.TestDataGenerashion.randomString;
+
 public class PageObjectsTest extends TestBase {
 
     @Test
