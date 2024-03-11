@@ -1,6 +1,8 @@
 package junit;
 
 import com.codeborne.selenide.*;
+import com.codeborne.selenide.commands.TakeScreenshot;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -21,7 +23,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Tips {
 
     //аннотации - метки
-    @DisplayName("Имя теста, что он тестирует, ВАЖНО - аннотация интегррована с Allure")
+    @Feature("Общее название объекта, который тестируем, например: Корпоративный Лид")
+
+    @Story("Конкретное название функции в рамках объекта, который тестирование: Создание Лида")
+
+    @DisplayName("Название тест кейса: Создание Лида через быстрое создание")
+
+    @Severity(SeverityLevel.BLOCKER)
+
+    @Link(value = "Test", url = "Указываем ссылку на какой то источник, важный в рамках теста, возможно сценарий")
 
     @Disabled("Исключает тест из проверки. Обычно прописывают почему, номер тиккета - бага, или задачи в рамках которой тест требуется поправить")
 
@@ -63,6 +73,12 @@ public class Tips {
         Configuration.browserSize = "1920x1080";
     }
 
+    @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
+            public byte[] takeScreenshot(){
+        return ((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+    }
+     // если требуется файл, например скриншот перевести в анатацию
+
     // множество разных сравнений Assertions.assertTrue();
 
     //Дополнительно, проверить, что находимся на нужной странице:
@@ -71,6 +87,9 @@ public class Tips {
     // после чего вводим следующее: String expectedUrl = "ссылка на сайт, которая должна быть равна нашей проверки";
     //                              String currentUrl = url();
     //                              assertEquals(expectedUrl, currentUrl);
+
+
+    //attachment("Source", webdriver().driver().sourse()); - создание скриншота.
 
 
     void browser_command_examples() {
@@ -264,8 +283,8 @@ public class Tips {
     void file_operation_examples() throws Exception {
 
         //static {
-       //     Configuration.fileDownload = FileDownloadMode.PROXY;
-       // }  - используется, если нет атрибута href для скачивания файлом
+        //     Configuration.fileDownload = FileDownloadMode.PROXY;
+        // }  - используется, если нет атрибута href для скачивания файлом
 
 
         File file1 = $("a.fileLink").download(); // only for <a href=".."> links простая ссылка для скачивания, кликнул - началась загрузка, на старых сайтах
@@ -292,8 +311,8 @@ public class Tips {
         //     byte[] bytes = is.readAllBytes();
         //    String textContent = new String(bytes, StandardCharsets.UTF_8);
         //    assertThat(textContent).contains("Test"); //это считается правильная конструкция кода, пропускает шаг, если не проверка по текусту проходит не успешно
-  //  }
-}
+        //  }
+    }
 
     void javascript_examples() {
         executeJavaScript("alert('selenide')"); //команды которые запускают javascript

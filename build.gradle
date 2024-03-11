@@ -1,8 +1,23 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.10.0'
 }
 repositories {
     mavenCentral()
+}
+
+allure {
+    report {
+        version.set("2.19.0")
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks{
+            junit5 {
+                adapterVersion.set("2.19.0")
+            }
+        }
+    }
 }
 
 dependencies {
@@ -15,7 +30,8 @@ dependencies {
             "com.codeborne:xls-test:1.4.3",
             "com.opencsv:opencsv:5.9",
             'com.google.code.gson:gson:2.10.1',
-            'com.github.javafaker:javafaker:1.0.2'
+            'com.github.javafaker:javafaker:1.0.2',
+            'io.qameta.allure:allure-selenide:2.25.0'
     )
 
 }
