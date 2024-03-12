@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/test.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/test.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,14 +200,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00007" summary="add">
-      <option name="closed" value="true" />
-      <created>1703265663075</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703265663075</updated>
     </task>
     <task id="LOCAL-00008" summary="add">
       <option name="closed" value="true" />
@@ -595,7 +585,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710262319805</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="add home">
+      <option name="closed" value="true" />
+      <created>1710262489688</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1710262489688</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
