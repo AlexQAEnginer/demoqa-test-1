@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Mar 06 22:11:39 YEKT 2024","Wed Mar 06 22:12:09 YEKT 2024","30099","","junit.PageObjectsTest","","junit.PageObjectsTest","fistTest","fistTest()",""
