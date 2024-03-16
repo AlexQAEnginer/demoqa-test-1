@@ -5,28 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/fileChanges/last-build.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gradle/8.4/gc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/allure-results/5bab69fd-c35b-4d53-911c-686c9432b76d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/allure-results/c811fca0-3987-40c7-bb16-37e25b917c06-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/allure-results/dff75826-2a24-42f1-9b99-49055614f7b0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/junit/RegistrationPageObjectStep.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/classes/java/test/pages/RegistrationPageStep.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1710608876163.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1710608876163.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1710609009601.0.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/1710609009601.0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/classes/junit.TestBankRF.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/css/base-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/js/report.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/reports/tests/simple_test/packages/junit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/simple_test/TEST-junit.TestBankRF.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/simple_test/binary/output.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/simple_test/binary/output.bin.idx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/test-results/simple_test/binary/results.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBankRF.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/allure-results/8c997e1b-013d-43a0-a3d6-bf244130ee44-result.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/junit/Tips.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/junit/Tips.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/pages/RegistrationPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/pages/RegistrationPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/junit.PageObjectsTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/junit.PageObjectsTest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/junit.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/junit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-junit.PageObjectsTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-junit.PageObjectsTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/RegistrationPage.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/junit/TestBankRF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/TestBankRF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/09a4bd5b-8c02-4cd2-9c8d-5ce1a6ed846f-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/1e5dcaad-f2a6-4eab-bdc1-f404dd529f1a-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/2777aa01-ce33-4d14-8bba-059e6208cf49-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/4221eebd-c57c-424a-a3a6-018216d93668-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/4b6d3478-175a-498d-951d-853331d77a49-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/63fa6b7f-949d-49a1-9f2b-71ede1309b46-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/677c3483-4643-4f40-a035-657e1fa2f5e2-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/6ee809a8-8bbf-4560-9d8f-fdb9f5849b27-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/937f69ce-ff7e-4a0b-82d2-bd4220670a0c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/97967c2a-be0e-4c05-bdaf-004b9de8cda8-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/a78db5cc-619a-4130-85ca-c1194e368a55-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/b2f2bbd0-bb81-45bf-aac0-c185278656eb-attachment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/c673abe9-33a9-43d0-8985-00c996ae0b4b-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/c70483ec-c91f-4df2-90f7-390232434808-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/d72323a2-2974-4478-a44f-2083b94da3b4-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/d8411734-e4f5-4cde-8af1-fa1e75d4ee41-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/d923fdb6-a356-451b-8183-48c6ebcf4c30-attachment.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/e0af6335-a312-460b-a132-95892260d8ef-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/e727c6ef-a0ce-46f9-8298-9b6e7362593c-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/executor.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/allure-results/executor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/allure-results/fe5d168e-032d-4bdd-b08d-bf638ed7c708-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/junit/TestBankRF.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/junit/TestBankRF.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/PageObjectsTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/TestBase.class.uniqueId1" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,14 +256,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00009" summary="add">
-      <option name="closed" value="true" />
-      <created>1703265881287</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1703265881287</updated>
     </task>
     <task id="LOCAL-00010" summary="add">
       <option name="closed" value="true" />
@@ -614,7 +641,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710263384327</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="add home">
+      <option name="closed" value="true" />
+      <created>1710610520603</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1710610520603</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

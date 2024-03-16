@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.error.ShouldHave.shouldHave;
-@Tag("simple")
+
 public class TestBankRF {
     @BeforeAll
     static void beforeAll() {
