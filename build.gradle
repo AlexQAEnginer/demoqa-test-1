@@ -12,7 +12,7 @@ allure {
     }
     adapter {
         aspectjWeaver.set(true)
-        frameworks{
+        frameworks {
             junit5 {
                 adapterVersion.set("2.19.0")
             }
@@ -44,5 +44,14 @@ test {
     useJUnitPlatform()
     systemProperties(System.getProperties())
 }
+
+task simple_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("simple")
+    }
+
+}
+
+
 
 

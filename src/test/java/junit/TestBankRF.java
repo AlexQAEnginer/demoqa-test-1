@@ -2,6 +2,7 @@ package junit;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
@@ -11,13 +12,14 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static org.assertj.core.error.ShouldHave.shouldHave;
-
+@Tag("simple")
 public class TestBankRF {
     @BeforeAll
     static void beforeAll() {
 
         Configuration.browserSize = "1920x1080";
     }
+
     @Test
     void career(){
         open("https://domrfbank.ru/");
