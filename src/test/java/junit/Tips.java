@@ -37,7 +37,7 @@ public class Tips {
 
     @Tag("BLOCKER")
 
-    @Tags({@Tag("BLOCKER"), @Tag("UI_TEST")})
+
     // указывается функциональная серьёзность теста + через Gradle можно запустить определенный тест по тегу
 
     @CsvSource({
