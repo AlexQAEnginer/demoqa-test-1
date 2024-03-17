@@ -5,41 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/behaviors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/behaviors.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/behaviors.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/behaviors.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/categories.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/categories.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/packages.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/packages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/suites.csv" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/suites.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/test-cases/92b89cc87cd230a8.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/timeline.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/data/timeline.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/export/influxDbData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/export/influxDbData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/export/prometheusData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/export/prometheusData.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/categories-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/categories-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/history-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/history.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/history/history.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/categories-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/categories-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/categories.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/categories.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/duration-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/duration-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/duration.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/duration.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/history-trend.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/history-trend.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/severity.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/severity.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/status-chart.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/status-chart.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/suites.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/suites.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/summary.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/allure-report/allureReport/widgets/summary.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,16 +71,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lekse/Next/demoqa-test-1/src/test/resources/example&quot;,
-    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/lekse/Next/demoqa-test-1/src/test/resources/example",
+    "settings.build.tools.auto.reload": "ALL",
+    "settings.editor.selected.configurable": "build.tools"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lekse\Next\demoqa-test-1\src\test\resources\example" />
@@ -248,14 +215,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00011" summary="add">
-      <option name="closed" value="true" />
-      <created>1703317163794</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1703317163794</updated>
     </task>
     <task id="LOCAL-00012" summary="add">
       <option name="closed" value="true" />
@@ -641,7 +600,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710611447025</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="add home">
+      <option name="closed" value="true" />
+      <created>1710693626272</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1710693626272</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
