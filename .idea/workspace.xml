@@ -7,6 +7,7 @@
     <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/junit/Tips.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/junit/Tips.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,22 +216,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add">
-      <option name="closed" value="true" />
-      <created>1703346083632</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1703346083632</updated>
-    </task>
-    <task id="LOCAL-00013" summary="add">
-      <option name="closed" value="true" />
-      <created>1704270419904</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1704270419904</updated>
     </task>
     <task id="LOCAL-00014" summary="add">
       <option name="closed" value="true" />
@@ -608,7 +593,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710693626272</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add home">
+      <option name="closed" value="true" />
+      <created>1710697351799</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697351799</updated>
+    </task>
+    <task id="LOCAL-00062" summary="add home">
+      <option name="closed" value="true" />
+      <created>1710697508449</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1710697508449</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
