@@ -1,1 +1,0 @@
-{"uuid":"5bab69fd-c35b-4d53-911c-686c9432b76d","name":"TestBankRF","children":["c811fca0-3987-40c7-bb16-37e25b917c06"],"befores":[{"name":"beforeAll","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1710608994127,"stop":1710608994146}],"afters":[],"start":1710608994078,"stop":1710609010139}

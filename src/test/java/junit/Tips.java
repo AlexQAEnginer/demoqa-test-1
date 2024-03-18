@@ -2,15 +2,20 @@ package junit;
 
 import com.codeborne.selenide.*;
 import com.codeborne.selenide.commands.TakeScreenshot;
+import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.empty;
@@ -52,8 +57,37 @@ public class Tips {
 
     @BeforeAll // что-то выполняется до запуска всех тестов
     static void setUp() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.browserSize = "1920x1080";
+        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wb/hub";
+        Configuration.pageLoadTimeout = 50000;
+
+        ChromeOptions options = new ChromeOptions();
+        options.setCapability("browserVersion", "122.0");
+        options.setCapability("selenoid:options", new HashMap<String, Object>() {{
+            /* How to add test badge */
+            put("name", "Test badge...");
+
+            /* How to set session timeout */
+            put("sessionTimeout", "15m");
+
+            /* How to set timezone */
+            put("env", new ArrayList<String>() {{
+                add("TZ=UTC");
+            }});
+
+            /* How to add "trash" button */
+            put("labels", new HashMap<String, Object>() {{
+                put("manual", "true");
+            }});
+
+            /* How to enable video recording */
+            put("enableVideo", true);
+        }});
     }
+
+
 
     @AfterAll // что-то выполняется после всех тестов
     static void tearDown() {
