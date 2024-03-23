@@ -6,15 +6,17 @@ repositories {
     mavenCentral()
 }
 
+def allureVersion = "2.19.0"
+
 allure {
     report {
-        version.set("2.17.2")
+        version.set(allureVersion)
     }
-    adapter {
-        aspectjWeaver.set(true)
+    adapter { // отвечает за появление папочки build/allure-results
+        aspectjWeaver.set(true) //обработка аннотации @Step
         frameworks {
-            junit5 {
-                    adapterVersion.set("2.17.2")
+            junit5 { //название фреймворка
+                adapterVersion.set(allureVersion) //версия интеграции фреймворка и Allure
             }
         }
     }
@@ -31,7 +33,7 @@ dependencies {
             "com.opencsv:opencsv:5.9",
             'com.google.code.gson:gson:2.10.1',
             'com.github.javafaker:javafaker:1.0.2',
-            'io.qameta.allure:allure-selenide:2.17.2'
+            'io.qameta.allure:allure-selenide:$allureVersion'
     )
 
 }

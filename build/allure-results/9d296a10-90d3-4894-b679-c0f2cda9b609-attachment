@@ -1,0 +1,5 @@
+[2024-03-23T15:57:36.166Z] [SEVERE] https://cdn.ad.plus/player/adplus.js 417:84 Uncaught TypeError: c(...).setup is not a function
+[2024-03-23T15:57:55.224Z] [SEVERE] https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js - Failed to load resource: net::ERR_CONNECTION_CLOSED
+[2024-03-23T15:57:55.259Z] [SEVERE] https://www.googletagservices.com/tag/js/gpt.js - Failed to load resource: net::ERR_CONNECTION_CLOSED
+[2024-03-23T15:57:55.268Z] [SEVERE] https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5889298451609146 - Failed to load resource: net::ERR_CONNECTION_CLOSED
+[2024-03-23T15:57:55.996Z] [SEVERE] https://stats.g.doubleclick.net/j/collect?t=dc&aip=1&_r=3&v=1&_v=j101&tid=UA-109033876-1&cid=575753249.1711209456&jid=1138677729&gjid=99026269&_gid=1607150835.1711209456&_u=YEBAAEAAAAAAACAAI~&z=2074127738 - Failed to load resource: net::ERR_CONNECTION_CLOSED
