@@ -71,16 +71,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/lekse/Next/demoqa-test-1/src/test/resources/example",
-    "settings.build.tools.auto.reload": "ALL",
-    "settings.editor.selected.configurable": "build.tools"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lekse/Next/demoqa-test-1/src/test/resources/example&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;ALL&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\lekse\Next\demoqa-test-1\src\test\resources\example" />
@@ -226,14 +226,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00022" summary="add">
-      <option name="closed" value="true" />
-      <created>1705243191904</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1705243191904</updated>
     </task>
     <task id="LOCAL-00023" summary="add">
       <option name="closed" value="true" />
@@ -619,7 +611,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711560711656</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="add home">
+      <option name="closed" value="true" />
+      <created>1711560801051</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1711560801051</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
