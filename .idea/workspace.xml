@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84cb141f-dc12-4be1-bceb-c501ada271b0" name="Changes" comment="add home">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +96,7 @@
       <recent name="junit" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.demoqa-test-1 [allureServe]">
+  <component name="RunManager" selected="Gradle.PageObjectsTest">
     <configuration name="PageObjectsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -210,8 +213,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.demoqa-test-1 [allureServe]" />
         <item itemvalue="Gradle.PageObjectsTest" />
+        <item itemvalue="Gradle.demoqa-test-1 [allureServe]" />
         <item itemvalue="Gradle.PageObjectsTest.fistTest" />
         <item itemvalue="Gradle.demoqa-test-1 [simple_test]" />
         <item itemvalue="Gradle.demoqa-test-1 [allureReport]" />
@@ -226,14 +229,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1703175925685</updated>
-    </task>
-    <task id="LOCAL-00023" summary="add">
-      <option name="closed" value="true" />
-      <created>1705244015665</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1705244015665</updated>
     </task>
     <task id="LOCAL-00024" summary="add">
       <option name="closed" value="true" />
@@ -619,7 +614,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711560801051</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="add home">
+      <option name="closed" value="true" />
+      <created>1711561137815</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1711561137816</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
